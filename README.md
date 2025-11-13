@@ -47,7 +47,7 @@ O sistema modela o problema como uma variação do **Problema da Mochila (Knapsa
 
 O algoritmo B\&B é usado para encontrar a combinação de quantidades inteiras de produtos que maximiza o lucro, respeitando a capacidade de tempo.
 
-  * **Ordenação:** Os produtos são ordenados pela razão **Lucro/Tempo** ($\frac{\text{profit\_unit}}{\text{estimated\_time}}$) para uma melhor heurística de relaxação.
+  * **Ordenação:** Os produtos são ordenados pela razão **Lucro/Tempo** para uma melhor heurística de relaxação.
   * **Nó (`BBNode`):** Representa um estado de decisão: `level` (produto atual), `profit`, `time_used`, `quantities` e `bound`.
   * **Heurística de Busca:** Utiliza uma **max-heap** para priorizar a exploração de nós com o maior `bound` (limite superior) para encontrar a melhor solução mais rapidamente.
   * **Relaxação (`bound_estimate`):** O limite superior é calculado usando a **relaxação fracionária** (como no knapsack 0/1, mas adaptado para quantidades limitadas) para os itens restantes, garantindo que o lucro ótimo está abaixo ou igual a este limite.
