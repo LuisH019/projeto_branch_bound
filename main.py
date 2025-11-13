@@ -5,7 +5,6 @@ e dashboard interativo em Streamlit.
 """
 
 import json
-import math
 import heapq
 import time
 import pandas as pd
